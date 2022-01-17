@@ -1,0 +1,30 @@
+.flightPassenger,.bookForm{
+    text-align: center;
+    font-family: monospace;
+    padding-top: 10px;
+}
+.inputBox{
+    padding-right: 15px;
+    padding-top: 30px;
+}
+
+.addNewPassenger:hover{
+    cursor:pointer;
+    background-color:yellow;
+}
+
+.searchButton{
+    background-color: lightpink;
+    font-family: sans-serif;
+  }
+
+  .input{
+    font-family: cursive;
+  }
+
+  .submitmsg{
+      color:rgb(8, 248, 8);
+      padding-left: 24rem;
+      font-family: monospace;
+  }
+  

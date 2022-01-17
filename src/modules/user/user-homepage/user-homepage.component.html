@@ -1,0 +1,22 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="searchflights"><mat-icon>flight</mat-icon>Book Flight </a>
+        </mat-nav-list>
+
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="searchticketbypnr"><mat-icon>search</mat-icon>Search Ticket By PNR</a>
+        </mat-nav-list>
+
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="userhistory" ><mat-icon>history</mat-icon>User History</a>
+        </mat-nav-list>
+
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="cancelticket"  ><mat-icon>cancel</mat-icon>Cancel Ticket</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

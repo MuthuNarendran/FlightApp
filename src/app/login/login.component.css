@@ -1,0 +1,21 @@
+.loginForm,h1{
+    text-align: center;
+    font-family: monospace;
+}
+
+.inputBox{
+    width: 25%;
+    font-family: monospace;
+}
+
+.alert-warning{
+ color: red;
+ text-align: center;
+}
+
+.searchButton{
+    background-color: lightpink;
+    font-family: sans-serif;
+    margin-left: 10px;
+
+  }

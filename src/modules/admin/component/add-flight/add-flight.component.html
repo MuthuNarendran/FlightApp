@@ -1,0 +1,83 @@
+<h1 class="addFlightHeader">Add Flights</h1>
+<div class="example-container">
+<form class="flightForm" #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Number</mat-label>
+    <input ngModel matInput type="text" name="number" placeholder="1" /><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Airline Name</mat-label>
+<input matInput ngModel type="text" name="airlinename" placeholder="Air Asia"/><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Origin</mat-label>
+<input matInput ngModel type="text" name="origin" placeholder="chennai" /><br/>
+</mat-form-field>
+<br>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Destination</mat-label>
+<input matInput ngModel type="text" name="destination" placeholder="mumbai" /><br/>
+</mat-form-field>
+
+<!-- <mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Date</mat-label>
+<input matInput ngModel type="text" name="date" placeholder="01-01-2022" /><br/>
+</mat-form-field> -->
+
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input" class="input">Date</mat-label>
+    <input ngModel name="date" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Start Time</mat-label>
+<input matInput ngModel type="text" name="startTime" placeholder="" /><br/>
+</mat-form-field>
+<br>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">End Time</mat-label>
+<input matInput ngModel type="text" name="endTime" placeholder="" /><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Scheduled Days</mat-label>
+<input matInput ngModel type="text" name="days" placeholder="" /><br/>
+</mat-form-field>
+
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Business Class Seats</mat-label>
+<input matInput ngModel type="text" name="businessClassSeats" placeholder="" /><br/>
+</mat-form-field>
+<br>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Economy Class Seats</mat-label>
+<input matInput ngModel type="text" name="economyClassSeats" placeholder="" /><br/>
+</mat-form-field>
+
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Business Class Seat No</mat-label>
+<input matInput ngModel type="text" name="businessClassSeatNumbers" placeholder="" /><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Economy Class Seat No</mat-label>
+<input matInput ngModel type="text" name="economyClassSeatNumbers" placeholder="" /><br/>
+</mat-form-field>
+<br>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Meals</mat-label>
+<input matInput ngModel type="text" name="meals" placeholder="veg" /><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Fare</mat-label>
+<input matInput ngModel type="text" name="fare" placeholder="1234" /><br/>
+</mat-form-field>
+<br>
+    <button  mat-flat-button class="searchButton" type="submit" >Submit</button>
+</form>
+<mat-card-content class="submitmsg" >{{message}}</mat-card-content>
+</div>
+
+
+
+

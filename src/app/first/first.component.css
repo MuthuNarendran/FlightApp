@@ -1,0 +1,11 @@
+.header{
+    font-family:monospace;
+    text-align: center;
+    margin-top: 10px;
+    color:royalblue
+}
+.imgcontainer{
+    width: 50%;
+    /* height: 10%; */
+    margin-left: 320px;
+}

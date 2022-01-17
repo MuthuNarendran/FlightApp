@@ -1,0 +1,32 @@
+
+  <mat-toolbar class="topbar">
+
+  <div class="toolbar-tools">
+
+      <a class="bookFlight" mat-button routerLink="user/homepage" (click)=bookflight()>
+        <span class="topbarTxt">Book A Flight</span>
+      </a>
+
+      <a mat-button class="login" routerLink="/login" (click)=login()>
+        <mat-icon>account_circle</mat-icon>
+        <span class="topbarTxt">Login</span>
+      </a>
+
+      <a style="display:none;" class="logout" mat-button (click)=logout()>
+        <mat-icon>logout</mat-icon>
+        <span class="topbarTxt">Logout</span>
+      </a>
+
+    </div> 
+
+
+  </mat-toolbar>
+   <router-outlet></router-outlet>
+
+   <mat-toolbar class="footer">
+    <span class="topbarTxt">Powered by Flights LLC ©2010-2021.</span>
+  </mat-toolbar>
+
+  
+
+

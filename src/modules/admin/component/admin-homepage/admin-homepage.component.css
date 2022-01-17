@@ -1,0 +1,26 @@
+mat-sidenav-container{
+height:100%
+}
+
+mat-sidenav{
+    padding-top: 80px ;
+}
+
+mat-nav-list{
+    padding-top: 50px;
+}
+
+
+mat-sidenav {
+    background-color: #7e90f7;
+    width: 170px;
+}
+
+mat-list-item{
+    background-color: black;
+}
+
+
+.lefttxt{
+    font-family: 'Source Sans Pro', sans-serif;
+}

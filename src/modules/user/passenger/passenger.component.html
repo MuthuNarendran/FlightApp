@@ -1,0 +1,25 @@
+<h1 class="flightPassenger">Booking Details</h1>
+
+<form [formGroup]= "passengerForm" #postPassengerForm="ngForm" class="bookForm" (ngSubmit)="onSubmit()">
+<div formArrayName="passengers">
+    <a class="addNewPassenger" (click)= "addNewPassenger()">+ Add New passenger</a>
+    <br>
+    <div *ngFor = "let pass of passengers.controls;let i=index">
+        <div [formGroupName]= "i" >
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label  class="input">Name</mat-label>
+        <input ngModel matInput type="text" name="name" formControlName = "name" placeholder="Ramesh" />
+    </mat-form-field>
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Gender</mat-label>
+        <input matInput ngModel type="text" name="gender" formControlName = "gender" placeholder="Male" />
+    </mat-form-field>
+</div>
+</div>
+<button mat-flat-button class="searchButton" type="submit" >Book Now</button>
+</div>
+    
+</form>
+
+<mat-card-content class="submitmsg" >{{message}}</mat-card-content>
+

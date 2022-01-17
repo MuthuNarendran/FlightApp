@@ -1,0 +1,49 @@
+.inputBox{
+    padding-right: 15px;
+}
+
+.searchForm,.flightBooking{
+    padding-top: 10px;
+    text-align: center;
+    font-family: monospace;
+}
+
+.searchButton{
+  background-color: lightpink;
+  font-family: sans-serif;
+}
+
+.tableHeader{
+  font-family: monospace;
+  font-weight: bold;
+  color: black;
+}
+
+.input{
+  font-family: cursive;
+}
+
+.demo-table {
+    width: 100%;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  
+  table {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  

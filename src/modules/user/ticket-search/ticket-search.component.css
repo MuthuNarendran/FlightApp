@@ -1,0 +1,39 @@
+.ticketSearch,.inputBox{
+    text-align: center;
+    font-family: monospace;
+    padding-top: 10px;
+
+}
+
+.inputBox{
+    padding-left: 350px;
+    padding-top: 40px;
+}
+
+table {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .example-container {
+    height: 400px;
+    overflow: auto;
+  }
+
+  .searchButton{
+    background-color: lightpink;
+    font-family: sans-serif;
+    margin-left: 10px;
+
+  }
+  
+  .tableHeader{
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .input{
+    font-family: cursive;
+  }
+

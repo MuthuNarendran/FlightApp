@@ -1,0 +1,37 @@
+<h1 class="flightPassenger">Booking Details</h1>
+
+<form #postForm="ngForm" class="bookForm" (ngSubmit)="onNext(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Name</mat-label>
+    <input class="inputBox" ngModel matInput type="text" name="name" placeholder="Ramesh" />
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">EmailId</mat-label>
+<input class="inputBox" matInput ngModel type="text" name="emailid" placeholder="abc@gmail.com" />
+</mat-form-field>
+
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Economy Seats</mat-label>
+<input class="inputBox" matInput ngModel type="text" name="economyseats" placeholder="1" />
+</mat-form-field>
+
+<br>
+
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Business Seats</mat-label>
+    <input class="inputBox" matInput ngModel type="text" name="businessseats" placeholder="1" />
+    </mat-form-field>
+
+    <mat-form-field class="inputBox" appearance="fill">
+      <mat-label class="input">Economy Seat Numbers</mat-label>
+  <input class="inputBox" matInput ngModel type="text" name="economyseatnumbers" placeholder="1E" />
+  </mat-form-field>
+
+  <mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Business Seat Numbers</mat-label>
+<input class="inputBox" matInput ngModel type="text" name="businessseatnumbers" placeholder="1A" />
+</mat-form-field>
+<br>
+    <button class="searchButton" mat-flat-button type="submit" >Next</button>
+</form>
+

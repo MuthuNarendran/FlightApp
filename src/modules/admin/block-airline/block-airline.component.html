@@ -1,0 +1,22 @@
+<h1 class="addAirlineHeader">Block Airline</h1>
+
+<form #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Airline Name</mat-label>
+    <input ngModel matInput type="text" name="airlineName" placeholder="Air India" /><br/>
+</mat-form-field>
+<br>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Status</mat-label>
+<input matInput ngModel type="text" name="status" placeholder="Operational" /><br/>
+</mat-form-field>
+<br>
+    <br>
+    <button mat-flat-button class="searchButton" type="submit" >Submit</button>
+</form>
+
+<mat-card-content class="submitmsg" >{{message}}</mat-card-content>
+
+
+
+

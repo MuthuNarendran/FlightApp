@@ -1,0 +1,10 @@
+<h1 class="ticketSearch">Cancel Tickets</h1>
+
+<form #postForm="ngForm" class="bookForm" (ngSubmit)="onSubmit(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label>PNR Number</mat-label>
+    <input ngModel matInput type="text" name="pnr" placeholder="123" />
+</mat-form-field>
+    <button class="searchButton" mat-flat-button type="submit" >Cancel</button>
+</form>
+<mat-card-content class="submitmsg" >{{message}}</mat-card-content>

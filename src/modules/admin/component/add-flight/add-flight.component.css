@@ -1,0 +1,36 @@
+.flightForm,.addFlightHeader{
+    text-align: center;
+    font-family: monospace;
+    padding-top: 10px;
+}
+
+.example-container .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .searchButton{
+    background-color: lightpink;
+    font-family: sans-serif;
+    margin-left: 10px;
+  }
+
+  .mat-calendar-body-cell-content mat-focus-indicator{
+    font-family: monospace;
+  }
+  
+  
+  .input{
+    font-family: cursive;
+  }
+
+  .submitmsg{
+    color:rgb(8, 248, 8);
+    padding-left: 22rem;
+    font-family: monospace;
+}
+
+.errorsubmitmsg{
+    color:red;
+    padding-left: 22rem;
+    font-family: monospace;
+}

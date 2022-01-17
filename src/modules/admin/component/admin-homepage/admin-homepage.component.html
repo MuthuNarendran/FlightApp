@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="addairline"><mat-icon>flight</mat-icon>Add Airline </a>
+        </mat-nav-list>
+
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="addflight"><mat-icon>flight</mat-icon>Add Flight </a>
+        </mat-nav-list>
+
+        <mat-nav-list >
+            <a class="lefttxt" mat-list-item routerLink="blockairline"><mat-icon>block</mat-icon>Block Airline </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

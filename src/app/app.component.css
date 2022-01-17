@@ -1,0 +1,54 @@
+h2{
+    text-align: center;
+}
+
+.topbar{
+   background-color:rgb(175, 241, 67);
+}
+
+.topbarTxt{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+.error{
+    color: crimson;
+}
+
+.loginForm{
+    text-align: center;
+}
+
+.login{
+    position: absolute;
+    right:0;
+    top:0;
+}
+.logout{
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.footer{
+    text-align: center;
+    color:white;
+    background-color: black;
+    font-size: 15px;
+}
+
+.user-avatar {
+  max-height: 35px;
+  border-radius: 4px;
+}
+
+
+.menu-item {
+  text-transform: uppercase;
+  cursor:pointer;
+}
+
+.menu-item.menu-item-active {
+  text-decoration: underline;
+}

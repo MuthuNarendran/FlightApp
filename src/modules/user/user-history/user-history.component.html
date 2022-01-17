@@ -1,0 +1,64 @@
+<h1 class="userHistory">Flight Booking User History</h1>
+
+<form #postForm="ngForm" class="searchForm" (ngSubmit)="onSubmit(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label>EmailId</mat-label>
+    <input ngModel matInput type="text" name="emailid" placeholder="abc@gmail.com" /><br/>
+</mat-form-field>
+    <button class="searchHistory" mat-flat-button type="submit" >Submit</button>
+</form>
+
+
+<div class="example-container">
+<table mat-table [dataSource]="dataSource">
+   <ng-container matColumnDef="name">
+    <th class="tableHeader" mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+   </ng-container>
+  
+    <ng-container matColumnDef="airlineName">
+      <th class="tableHeader" mat-header-cell *matHeaderCellDef>Airline Name</th>
+      <td mat-cell *matCellDef="let element">{{element.airlineName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="depatureTime">
+      <th class="tableHeader" mat-header-cell *matHeaderCellDef>Depature Time</th>
+      <td mat-cell *matCellDef="let element">{{element.depatureTime}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="endTime">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>End Time</th>
+        <td mat-cell *matCellDef="let element">{{element.endTime}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element">{{element.date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="source">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Source</th>
+        <td mat-cell *matCellDef="let element">{{element.source}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="destination">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Destination</th>
+        <td mat-cell *matCellDef="let element">{{element.destination}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="businessSeat">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Business Seat</th>
+        <td mat-cell *matCellDef="let element">{{element.businessSeat}}</td>   
+      </ng-container>
+
+      <ng-container matColumnDef="economySeat">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>EconomySeat</th>
+        <td mat-cell *matCellDef="let element">{{element.economySeat}}</td>   
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="input" mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="selection.toggle(row)">
+  </table>
+</div>
+

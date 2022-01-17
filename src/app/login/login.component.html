@@ -1,0 +1,48 @@
+<h1 [ngStyle]="headerStyle">Login Page</h1>
+
+<form [formGroup]="myForm" #loginForm="ngForm" class="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label>Input</mat-label>
+    <input matInput type="text" formControlName="username" placeholder="username" /><br/>
+    <span class="error" *ngIf="myForm.controls['username'].dirty && myForm.controls['username'].errors!=null">
+        <span *ngIf="myForm.controls['username'].errors['required']">Username can not be empty</span>
+        <span *ngIf="!!myForm.controls['username'].errors['minlength']">Min 2 chars are required</span>
+        <span *ngIf="!!myForm.controls['username'].errors['maxlength']">Max 10 chars are allowed</span>
+    </span>
+</mat-form-field>
+<br>
+    <mat-form-field class="inputBox" appearance="fill">
+     <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password" placeholder="Password"/>
+    <span class="error" *ngIf="myForm.controls['password'].dirty && myForm.controls['password'].errors!=null">
+      <span *ngIf="myForm.controls['password'].errors['required']">Password can not be empty</span>
+      <span *ngIf="!!myForm.controls['password'].errors['minlength']">Min 2 chars are required</span>
+      <span *ngIf="!!myForm.controls['password'].errors['maxlength']">Max 15 chars are allowed</span>
+  </span>
+    </mat-form-field>
+    <br>
+    <button  mat-flat-button class="searchButton" type="submit" [disabled]="myForm.invalid">Submit</button>
+    <div class="alert-warning" *ngIf="submitted&&isLoginFailed">LogIn failed {{ errorMessage }}</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+

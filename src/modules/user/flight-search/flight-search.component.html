@@ -1,0 +1,95 @@
+<h1 class="flightBooking">Flight Search and Booking</h1>
+
+<form #postForm="ngForm" class="searchForm" (ngSubmit)="onSubmit(postForm.value)">
+    <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Source</mat-label>
+    <input ngModel matInput type="text" name="source" placeholder="Chennai" /><br/>
+</mat-form-field>
+<mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Destination</mat-label>
+<input matInput ngModel type="text" name="destination" placeholder="Mumbai" /><br/>
+</mat-form-field>
+
+<!-- <mat-form-field class="inputBox" appearance="fill">
+    <mat-label class="input">Depature Date</mat-label>
+<input class="input" matInput ngModel type="text" name="depaturedate" placeholder="01-01-2022" /><br/>
+</mat-form-field> -->
+
+<mat-form-field class="inputBox" appearance="fill">
+  <mat-label class="input" class="input">Depature Date</mat-label>
+  <input ngModel name="depaturedate"  placeholder="01-01-2022" matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+    <!-- <mat-form-field class="inputBox" appearance="fill">
+        <mat-label class="input">Return Date</mat-label>
+    <input class="input" matInput ngModel type="text" name="returndate" placeholder="01-01-2022" /><br/>
+    </mat-form-field> -->
+
+    <mat-form-field class="inputBox" appearance="fill">
+      <mat-label class="input" class="input">Return Date</mat-label>
+      <input ngModel name="returndate"  placeholder="02-01-2022" matInput [matDatepicker]="picker1">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-flat-button class="searchButton" type="submit" >Submit</button>
+</form>
+
+
+<div class="example-container">
+<table mat-table [dataSource]="dataSource">
+   <ng-container matColumnDef="id">
+    <th class="tableHeader" mat-header-cell *matHeaderCellDef>Id</th>
+    <td style="display:none;" mat-cell *matCellDef="let element">{{element.id}}</td>
+   </ng-container>
+  
+    <ng-container matColumnDef="airline">
+      <th class="tableHeader" mat-header-cell *matHeaderCellDef>Airline</th>
+      <td mat-cell *matCellDef="let element">{{element.airline.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="origin">
+      <th class="tableHeader" mat-header-cell *matHeaderCellDef>Origin</th>
+      <td mat-cell *matCellDef="let element">{{element.origin}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="destination">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Destination</th>
+        <td mat-cell *matCellDef="let element">{{element.destination}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element">{{element.date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="startTime">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>StartTime</th>
+        <td mat-cell *matCellDef="let element">{{element.startTime}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="endTime">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>endTime</th>
+        <td mat-cell *matCellDef="let element">{{element.endTime}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fare">
+        <th class="tableHeader" mat-header-cell *matHeaderCellDef>fare</th>
+        <td mat-cell *matCellDef="let element">{{element.fare}}</td>   
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th style="display:none;" mat-header-cell *matHeaderCellDef > Actions </th>
+        <td mat-cell *matCellDef="let row" >
+             <button class="searchButton" mat-button type="submit" (click)="onBook(row.id)" >Book</button>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="input" mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="selection.toggle(row)">
+  </table>
+</div>
+

@@ -1,0 +1,35 @@
+.ticketSearch,.inputBox{
+    text-align: center;
+    font-family: monospace;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.inputBox{
+    padding-left: 350px;
+    padding-top: 40px;
+}
+
+.searchButton{
+    background-color: lightpink;
+    font-family: sans-serif;
+    margin-left: 10px;
+
+  }
+
+  .submitmsg{
+    color:rgb(8, 248, 8);
+    padding-left: 22rem;
+    font-family: monospace;
+}
+  
+  .tableHeader{
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .input{
+    font-family: cursive;
+  }
+

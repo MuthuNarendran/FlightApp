@@ -1,0 +1,22 @@
+.flightPassenger,.bookForm{
+    padding-left: 40px;
+    text-align: center;
+    font-family: monospace;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.inputBox{
+  padding-right: 15px;
+}
+
+.searchButton{
+  background-color: lightpink;
+  font-family: sans-serif;
+}
+
+.input{
+  font-family: cursive;
+}
+
+
